@@ -1,0 +1,58 @@
+
+
+h1.PiuPiuwer_title{ left:72%; top: 10%;}
+
+
+/* 2 PROFILE PHOTO AND USERNAME */
+img.basics_profile_photo{
+    background-image: url(../img/examplephotos/profilephoto.gif);
+    left:75%;
+    top:27%;
+}
+
+.name_profile_position{
+    position: absolute;
+    left: 76%;
+    top: 55%;
+
+    font-size: 2em;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    color: rgb(155, 151, 151);;
+    
+}
+
+
+/* 3 SETTINGS FORM */ 
+form.basics_form_input{
+
+    left:5%;
+    top: 10%;
+
+    width: 580px;
+    height: 1000px;
+    
+    padding: 0% 15% 10% 15%;
+    border-radius: 10px;
+}
+
+label input, label select, label textarea{ width: 406px;}
+
+h2, form.basics_form_input h3{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+}
+
+    /*BACK BUTTON*/
+    button.button_login{
+        position: absolute;
+        left: 53%;
+        top: 15%;
+    }
+
+    /*SAVE BUTTON*/
+    input.button_login{
+        position: absolute;
+        left: 60%;
+        top: 15%;
+    }

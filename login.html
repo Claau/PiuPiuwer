@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <meta charset="uft-8"> 
+        
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/basics_layout.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700"> 
+
+    </head>
+
+    <body class="basics_body">
+
+
+    <!-- 1  ABA do Navegador   -->          
+        <title>PiuPiuwer </title>
+        <link rel="icon" href="img/patoicon.png">
+
+    <!-- 2 COVER IMAGE BACKGROUND -->
+        <header class="cover_img"> </header>
+
+    <!-- 3 SINGIN FORM- USERNAME AND PASSWORD-->
+        <form class="basics_form_input">
+
+            <h1 class="PiuPiuwer_title">  PiuPiuwer </h1>
+
+            <label for=username>
+                <input id="login_input" name=username id=username placeholder="USERNAME" autocomplete="on" >
+            </label>
+
+            <label for=password>
+                <input id="login_input" name=password id=password placeholder="PASSWORD" autocomplete="on" pattern="[A-Za-z0-9]*{8,}"  >
+            </label>
+
+            <button class="button_login"> <a href="feed.html"> LOGIN </a></button>
+
+        </form> 
+
+    <!-- 4 REGISTER FORM  -->
+        <button class="register"> REGISTER </button>
+
+
+        <form class="basics_form_input" id="registerForm" >
+            <h2> Settings</h2>
+            <h3> Basics </h3>
+
+                <label for=Username> Username 
+                    <input type=text id=Username name=Username pattern="[A-Za-z0-9]*" max="2019-09-15" >
+                </label>
+
+                <label for=Birthday> Birhday 
+                    <input type=date id=Birhday name=Birhday pattern="[A-Za-z0-9]*" max="2019-09-15" >
+                </label>
+
+                <label for=Sex > Sex 
+                    <select id=Sex>
+                            <option value=" " > </option>
+                            <option value="female"> FEMALE </option>
+                            <option value="male"> MALE </option>
+                            <option value="other"> OTHER </option>
+                    </select>
+                </label>
+                
+                <label for=Relationship > Relationship 
+                    <select id=Relationship>
+                        <option value=" " > </option>
+                        <option value="single"> SINGLE </option>
+                        <option value="married"> MARRIED </option>
+                        <option value="dating"> DATING </option>
+                    </select>
+                </label>
+                   
+                <label for=Country> Made in
+                    <input type=local id=Country name=Country pattern="[A-Za-z0-9]*"" placeholder="I was born in...">
+                </label>
+
+            <h3> More info </h3>
+
+                <label for=Hobbies> Hobbies 
+                    <textarea type=text id=Hobbies name=Hobbies rows="2" pattern="[A-Za-z0-9]*" placeholder="Truco na Minerva, La Casa de Papel, Algelin II..."></textarea>
+                </label>
+
+                <label for=Description> Description
+                    <textarea id=Description name=Description rows="3" pattern="[A-Za-z0-9]*" placeholder="Tell something about yourself"></textarea>
+                </label>
+
+            <h3> Contacts </h3>
+
+                <label for=Email> Email 
+                    <input type=email id=Email name=Email pattern="[A-Za-z0-9]*" >
+                </label>
+
+                <label for=Cell> Cell 
+                    <input type=tel id=Cell name=Cell pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </label>
+            
+            <h3> Others </h3>
+
+                <label for=ProfilePhoto> Profile photo
+                        <input type=file id=ProfilePhoto name=ProfilePhoto " >
+                </label>
+    
+                <label for=CovePhoto> Cover photo
+                       <input type=file id=CovePhoto name=CovePhoto ">
+                </label>
+
+            <h3> Password </h3>  
+                <label for=Password> Password
+                    <input type=text id=Password name=Password pattern="[A-Za-z0-9]*">
+                </label>
+
+            <input class="button_login" id="save_button_position" type=submit name=sttngs id=Save value="SAVE">
+               
+            
+         </label>  
+                
+        </form>  
+
+    
+        <script  src="js/jquery-3.4.1.js"></script>
+        <script src="js/UserData.js"></script>
+
+    </body>
+
+</html>

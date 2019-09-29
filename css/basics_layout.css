@@ -1,0 +1,466 @@
+
+/*CSS Geral a todos os htmls */
+
+.basics_body{
+   
+    background-color: rgb(238, 238, 238);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    outline: none;    
+}
+
+button,textarea,input { outline:none ; resize: none }
+
+a:link,a:visited,a:hover {
+    text-decoration:none;
+    color: inherit;
+    font-weight: inherit;
+    background-color: inherit;
+
+    }
+
+
+/*------------------LOGO E TITULO DA PAGINA*/
+
+.PiuPiuwer_title{
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    font-size: 2.65em;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    
+    padding-left: 2.5em;
+     
+}
+
+.PiuPiuwer_title::before{
+    content: " ";
+
+    width: 0.8em;
+    height: 0.8em;
+
+    position:absolute;
+    left: 0%;
+
+    background-image: url(../img/patoicon.png);
+    background-size: 0.8em;
+    background-repeat: no-repeat;
+
+    font-size: 2.65em;
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+
+}
+
+
+/*------------------BUTÕES DE LOGIN E LOGOUT E OUTROS*/
+.button_login{
+    width: 100px;
+    height: 35px;
+    
+    border-radius: 15px;
+    border: 1px solid rgb(187, 187, 187);
+    padding: 0.55em 0.45em 0.55em 0.45em;
+    
+    background: rgb(21, 206, 98);
+}
+
+.button_login:hover,:focus{
+    background: rgb(19, 187, 89);
+
+}
+
+.basics_logout_button{
+    position: absolute;
+
+    top:5%;
+    left: 90%;
+    width: 100px;
+    height: 35px;
+    
+    border-radius: 15px;
+    border: 1px solid rgb(187, 187, 187);
+    padding: 0.55em 0.45em 0.55em 0.45em;
+    
+    background: rgb(21, 206, 98);
+}
+
+.basics_logout_button:hover,:focus{
+    background-color: white;
+    color: rgb(21, 206, 98);
+}
+
+/*------------------PADRONIZAÇÃO DE FORMULARIO E SEUS INPUTS*/
+.basics_form_input{
+    position: absolute;
+
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: white;
+    border: 2px solid rgb(202, 202, 202);
+
+}
+
+.basics_form_input label input,
+.basics_form_input label select,
+.basics_form_input label textarea{
+    display: block;
+    border-radius: 5px;
+    border: 0.5px solid rgb(187, 187, 187);
+    padding: 0.3em;
+    padding-left: 1em;
+
+    font-family: inherit;
+    font-size: 1em;
+    margin: 5px;
+    
+    background: #ffffff;
+}
+
+.basics_form_input label select{
+    padding: 0.2em;  
+}
+
+.basics_form_input label input::placeholder,
+.basics_form_input label select::placeholder,
+.basics_form_input label textarea::placeholder{
+    text-align: center;
+    font-family: inherit;
+    font-size: 1em;
+   
+}
+
+.basics_form_input label input:hover,
+.basics_form_input label input:focus,
+.basics_form_input label select:hover,
+.basics_form_input label select:focus,
+.basics_form_input label textarea:hover,
+.basics_form_input label textarea:focus{ 
+    color:  rgb(0, 0, 0);
+}
+
+/* --------CAIXAS DE PUBLICAÇÕES de PIUS*/
+
+.feedDiv{               /*DIV "invisivel" que ajuda a alinhar os elementos dos Pius*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.basics_divPius{        /*DIV feita como solução a um bug, tbm ajuda a alinhar OS elementos dos Pius*/    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    
+    position: relative;
+    top: 120px;
+    width: 100%;
+}
+
+.basics_piu_box{        /*TEXTAREA onde são escritos os Pius*/
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+
+    resize: none;
+
+    border-radius: 7px;
+    padding: 0.7em;
+    padding-right: 7%;
+    width: 90%;
+    height: 50px;
+    border: 1.5px solid rgb(187, 187, 187);  
+    top: 11px;
+}
+
+.basics_piu_box::placeholder{ font-size: 1.2em }
+.basics_piu_box:focus{
+    border: 1.5px solid rgb(21, 206, 98);
+    color: black;
+}
+
+.basics_contador{       /*SPAN contador de caracteres PIU*/
+    position: absolute;
+    font-weight: 500;
+    color:  rgb(163, 163, 163);
+    font-size: 1em;
+    font-family: inherit;
+    right:2%; 
+    top: 95px;
+}
+
+.basics_usernamePiu{        /*@USERNAME*/
+    position: absolute;
+    top: 0px;
+    left: 20px;
+
+    padding: 50px 0px 0px 120px;
+    
+
+    font-size: 1.25em;
+    color: rgb(168, 168, 168);
+    font-weight: 200;
+}
+
+.basics_Piu_p{ padding-top:10px } /*MENSAGEM do piu*/
+.basics_photoProfile_piu{
+    position: absolute;
+    background-image: url(../img/default_profile_photo.png);
+    background-size: 6.5em;
+
+    top:15px;
+    left: 15px;
+    width: 6.5em;
+    height: 6.5em;
+    border-radius:100px;
+}
+
+    /*CARACTERISTICAS DE CADA PIU */
+   /* #firstPiu{display: none;}*/
+
+    .basics_Piu{            /*ARTICLE(caixa) que guarda cada Piu*/
+        
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        
+        width: 82%;
+        padding:  4em 0em 3em 144px;
+        
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 5px;
+
+        margin: 1px 0em 5px 0em;
+    }
+
+    /* BOTOES (LIKE, DISLIKE, EDIT) E SEUS CONTADORES*/
+    .basics_Piu_delete_button{
+        position: absolute;
+
+        top: 5px;
+        right: 8px;
+        border: 0.5px solid transparent;
+        
+        width: 2.5em;
+        height: 2.5em;
+        background-size: 2em;
+        
+        background-image: url(../img/delete.png);
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .basics_Piu_dislike_button{
+        bottom: 7px;
+        left: 135px;
+        position: absolute;
+
+        width: 2.5em;
+        height: 2.5em;
+        background-size: 2em;
+        
+        background-image: url(../img/dislike.png);
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .basics_Piu_like_button{
+        position: absolute;
+        bottom: 7px;
+        left: 210px;
+
+        width: 2.5em;
+        height: 2.5em;
+        background-size: 2em;
+        
+        background-image: url(../img/like.png);
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .basics_Piu_edit_button{
+        position: absolute;
+        bottom: 10px;
+        right: 12px;
+
+        width: 2em;
+        height: 2em;
+        background-size: 2em;
+        
+        background-image: url(../img/edit.png);
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .basics_Piu_highlight_button{
+        position: absolute;
+        bottom: 9px;
+        left: 275px;
+
+        width: 2.2em;
+        height: 2.2em;
+        background-size: 2.2em;
+
+        border-radius: 100px;
+        
+        background-image: url(../img/highlight.png);
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .basics_Piu_delete_button:hover,
+    .basics_Piu_dislike_button:hover,
+    .basics_Piu_like_button:hover,
+    .basics_Piu_edit_button:hover,
+    .basics_Piu_highlight_button:hover{
+        background-size: 2.5em;
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .basics_contadorLikes{ /*SPAN contador de likes*/
+        position: absolute;
+        bottom: 13px;
+        left:250px; 
+        font-size: 1.2em;
+    }
+    
+    .basics_contadorDislikes{/*SPAN contador de dislikes*/
+        position: absolute;
+        bottom: 13px;
+        left:175px; 
+        font-size: 1.2em;
+    }
+    
+
+
+
+    
+/*BOTÃO DE ENVIAR PIU -*/
+.basics_submit_piu{
+    position: absolute;
+
+    background-image: url(../img/sendicon_hover.png);
+    background-color: transparent;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+
+    text-indent: -9999px;
+
+    right: 20px;
+    top:20px;
+
+    border: 3px solid transparent;
+    border-radius:100% ;
+    width: 3em;
+    height: 3em;
+}
+
+.basics_submit_piu:hover{
+    background-image: url(../img/sendicon.png);
+    
+}
+.basics_submit_piu:focus{
+    background-image: url(../img/sendicon_focus.png);
+    background-color:  rgb(21, 206, 98);
+}
+
+
+/*-------------Profile photo*/
+.basics_profile_photo{
+    position: absolute;
+    width:250px;
+    height: 250px;
+    border: 1px solid  rgb(190, 190, 190);
+}
+
+.name_profile{
+    position: absolute;
+
+    font-size: 2em;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    color: rgb(173, 0, 0);    
+
+}
+
+/* 4 SEARCH BAR CARACTERISTICS*/
+.basics_searchbar_feed{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    border: 1px solid rgb(221, 221, 221);
+        border-radius: 5px;
+    
+    width: 18%;
+    height: 450px;
+
+    left: 3%;
+    top: 450px;
+}
+.basics_searchbar_feed:hover{ 
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 10px;
+    }
+
+.basics_searchbar_input{
+    position: absolute;
+    top: 2%;
+
+    border-radius: 7px;
+    width: 88%;
+    border: 2px solid rgb(187, 187, 187);
+    padding: 0.5em;
+    font-family: inherit;
+}
+
+/*-------------A+*/
+
+.basics_text_indent{
+    text-indent:-9999px;
+}
+
+#redBorder,
+#redBorder:hover,
+#redBorder:focus{
+    background-color: black;
+  
+    border: 1.2px solid red;
+    color: red;
+}
+
+.highlightPiu{
+    border: 2px solid rgb(255, 255, 84);
+}
+
+.sticky div{ position: absolute;}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+  }
+
+

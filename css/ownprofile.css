@@ -1,0 +1,121 @@
+
+/* 2 BACKGROUND COVER USER'S PROFILE */
+.user_cover_photo{
+
+    position: relative;
+
+    background-image: url(../img/examplephotos/coverphoto.jpeg);
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    left: 0px;
+    top: 0px;
+
+}
+
+    /* 2.1 MENU DE NAVEGACAO PRINCIPAL */
+    .nav_profile_basic{
+
+        display: flex;
+        position: sticky;
+        top:0;
+        z-index: 1;
+
+        background-color: #fff;
+        top: 90%;
+        width: 30%;
+        height: 1.25em;
+        padding: 0.5em;
+        padding-left: 25%;
+        padding-right: 45%;
+        
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(59, 59, 59);
+        font-size: 1.25em;
+        
+        
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    .nav_profile_basic p:nth-of-type(2n+1){
+        color: rgb(107, 107, 107);  
+    }
+
+    /* 2.1.1 BUTTON MENU NO NAV PRINCIPAL*/
+    .nav_profile_basic button{
+
+        color: rgb(21, 206, 98);
+        font-size: 1em;    
+        font-weight: bold;
+
+        background-color:white;
+
+        border: 2px solid white;  
+    }
+
+        /* MENU OPTIONS - HOME, SETTINGS*/
+        .nav_profile_basic button:hover:after,
+        .nav_profile_basic button:focus:after{
+            content: " ";
+            position:absolute;
+            left:54%;
+            top:30%;
+            width: 200px;
+            height: 300px;
+            background-color: rgb(202, 202, 202);
+            border-radius: 30px;
+        }
+
+        .nav_profile_basic button:hover,
+        .nav_profile_basic button:focus{
+            color: white;   
+            background-color: rgb(21, 206, 98);     
+        }
+
+    /* 2.4 PROFILEPHOTO */
+    img.basics_profile_photo{ left:50px; top:425px; z-index: 2; }
+
+
+/* 3 USER INFO CARACTERISTICS*/
+.info_usr_general{
+
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    top: 800px; 
+    left: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.info_usr_basic p:first-child{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2em;
+}
+
+
+/* 4 FEED */
+.ownfeed{
+
+    position: absolute;
+    width: 60%;
+    height: 1000%;
+    left: 450px;
+    top: 610px;
+    background-color: white;
+    border-radius:7px;
+    
+}
+
+.basics_piu_box{ top:10px; }
+
+
+

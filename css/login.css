@@ -1,0 +1,92 @@
+.basics_body{ height: 1000px;}
+
+/*2 COVER IMAGE BACKGROUND CARACTERISTICS */
+.cover_img{
+    position: absolute;
+    width: 98%;
+    height: 550px;
+    left: 1%;
+    top: 1%;
+    background-image: url(../img/login/duck.gif);
+}
+
+
+/* 3 SINGIN FORM- USERNAME AND PASSWORD CARACTERISTICS*/
+h1.PiuPiuwer_title{ top: 20px; left: 5%;}
+
+form.basics_form_input{
+    left: 35%;
+    top: 350px;   
+    width: 30%;
+    height: 135px;
+ 
+    padding-top: 8%;
+    padding-bottom: 3%;
+    
+    position: relative;
+    align-items: center;
+}
+
+button.button_login{  border-radius: 50px;}
+
+#login_input {
+    width: 200px;
+    height: 1.5em;
+
+    font-size: 1em;
+    text-align: center;
+    background-color:  rgb(238, 238, 238);
+
+
+    border-radius: 50px;
+    border: 0.5px solid rgb(187, 187, 187);
+}
+
+#login_input:hover,:focus{ background-color: rgb(202, 202, 202); }
+
+
+/* 4 REGISTER FORM */
+.register{
+    position: absolute;
+    
+    
+    width: 30%;
+    height: 60px;
+    top:700px;
+    left: 35%;
+
+    text-align: center;
+
+    background-color: white;
+    border: 2px solid rgb(202, 202, 202); 
+    
+    font-size: 1em;
+}
+
+.register:hover,
+.register:focus{
+    font-weight: bold;
+}
+
+#registerForm{
+    width: 70%;
+    left: 15%;
+    top: 500px;
+
+    height: 1200px;
+    display: none;
+    
+    padding: 50px 5px 100px 5px;
+    align-items: center;
+}
+
+#save_button_position{
+    margin: 30px;
+}
+
+
+
+
+
+
+

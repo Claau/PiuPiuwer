@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+
+<html>
+    
+    <head>
+        <meta charset="uft-8">
+
+        <link rel="stylesheet" href="css/basics_layout.css">
+        <link rel="stylesheet" href="css/feed.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        
+    </head>
+
+    
+    <body class="basics_body">
+
+
+    <!-- 1  ABA do Navegador   -->
+        <title>PiuPiuwer </title>
+        <link rel="shortcut icon" href="img/patoicon.png">
+        <h1 class="PiuPiuwer_title" > PiuPiuwer </h1>
+            
+
+    <!-- 2  PIU'S FEED - Região principal onde serão publicados os Piu's -->
+        <main class="main_feed" > 
+            <form class="feedDiv" >
+                <textarea for="piu_box" class="basics_piu_box"  name=piu cols=140 rows=3 placeholder="Thinking about something????"></textarea>
+                <input type="submit" class="basics_submit_piu">
+                <span class="basics_contador">0/140</span>
+
+                <div class="basics_divPius">
+
+                    <article class="basics_Piu" id="firstPiu">
+                        
+                        <button class="basics_Piu_dislike_button" ></button>
+                        <span class="basics_contadorDislikes">0</span>
+                        <button class="basics_Piu_like_button"></button>
+                        <span class="basics_contadorLikes">0</span>
+                           
+                        <span class="basics_usernamePiu">@usuario</span>
+                        <img  class="basics_photoProfile_piu"></img>
+                        
+                        <p  class="basics_Piu_p" > allllouuuuuuuuu </p>
+                    </article>
+                    
+                </div>
+            </form>
+
+        </main>
+
+
+    <!-- 3 PRINCIPAL MENU - permite navegar entre as paginas: PROFILE, HOME E SETTINGS -->
+        <nav class="sticky"> 
+            <table class="nav_menu">
+
+                <tr >
+                     <td> 
+                         <a href="feed.html">
+                                <button id="menu_home" class="button_menu"> HOME </button>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr >  
+                    <td>
+                        <a href="ownprofile.html">
+                            <button id="menu_profile" class="button_menu"> PROFILE </button>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td> 
+                        <a href="settings.html">
+                            <button id="menu_settings"class="button_menu"> SETTINGS </button>
+                        </a> 
+                    </td>
+                </tr>
+
+            </table>
+        </nav>
+
+        
+    <!-- 4 SEARCH USER'S BAR- Permite encontrar usuarios por meio do nome, e clickando nele abre o PROFILE do usuario -->
+        <aside  class="basics_searchbar_feed"  > 
+                <input type="search" name="searchbar" class="basics_searchbar_input" placeholder="Search..." >
+        </aside>
+
+        
+    <!-- 5 USER INFO -->
+    <section  class="sticky">
+        <div>
+            <img class="basics_profile_photo" src="img/examplephotos/profilephoto.gif" >
+            <label class="name_profile"> Name_profile </label>
+        </div>
+        </section>
+    
+
+    <!-- 6 LOGOUT BUTTON -->
+        <a href="login.html"><button class="basics_logout_button"> LOG OUT</button></a>
+
+
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/PiuMessages.js"></script>
+       
+
+    </body>
+
+    
+</html>

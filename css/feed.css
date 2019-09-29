@@ -1,0 +1,84 @@
+
+aside.PiuPiuwer_title{ top: 5%; left: 3%; }
+
+
+/* 1 FEED CARACTERISTICS*/
+.main_feed{
+    position: absolute;
+    width: 50%;
+    height: 1000%;
+    left: 25%;
+    background-color: white;
+
+}
+
+/* 2 PIU'S FEED BUTTONS ANND CARACTERISTICS*/
+input.basics_submit_piu{ top:25px; }
+
+
+
+/* 3 MENU PRINCIPAL DE NAV - HOME, PROFILE, SETTINGS*/
+.nav_menu {
+    position: absolute; 
+    top: 200px; 
+    left: 3%;
+    width: 18%;
+   
+    border-radius: 5px;
+    background-color: white;
+}
+
+.nav_menu td{ width: 100%; height: 3em;}
+
+
+    /* 3.1BUTTONS DO MENU PRINCIPAL*/
+    .button_menu{
+        width:100%;
+        height: 100%;
+
+        color:  rgb(21, 206, 98); 
+        font-size: 1.5em;
+
+        border: 0px solid transparent;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .button_menu:hover,
+    .button_menu:focus{ color: white; background-color: rgb(21, 206, 98); }
+
+    /* 3.2 ICONS DE CADA OPCAO  DO MENU PRINCIPAL*/
+    .button_menu::after{
+        content: " ";
+        position: absolute;
+       
+        width: 2em;
+        height: 2em;
+        left: 80%;
+    
+        background-size: 1.5em;
+        background-repeat: no-repeat;   
+    }
+
+    #menu_home::after { background-image: url(../img/patoicon.png); }
+    #menu_profile::after { background-image: url(../img/profileicon.png); }
+    #menu_settings::after { background-image: url(../img/settingsicon.png); }
+
+    #menu_profile:hover::after{ background-image: url(../img/profileicon_hover.png) }
+    #menu_settings:hover::after{ background-image: url(../img/settingsicon_hover.png); }
+
+
+/* 5 USER INFO - PROFILE'S PHOTO AND NAME*/
+img.basics_profile_photo{
+
+    width:200px;
+    height: 200px;
+    left: 1500px;
+    top:300px;
+}
+
+label.name_profile{ left: 1500px; top: 550px; }
+
+
+
+
+

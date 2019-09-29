@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="uft-8"> 
+
+        <link rel="stylesheet" href="css/basics_layout.css">
+        <link rel="stylesheet" href="css/ownprofile.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700"> 
+
+
+    </head>
+
+    <body class="basics_body">
+
+    <!-- 1 ABA DO NAVEGADOR -->
+        <title>PiuPiuwer </title>
+        <link rel="icon" href="img/patoicon.png">
+
+    
+        
+    <!-- 2 BACKGROUND COVER USER'S PROFILE -->
+        <header class="user_cover_photo" >
+
+        <!-- 2.1 MENU DE NAVEGACAO PRINCIPAL -->
+            <nav class="nav_profile_basic" > 
+                <p> FOLLOWERS </p>
+                <p> 3000 </p>
+                <p> PIUS </p>
+                <p> 0000 </p>
+                <button> MENU </button>        
+            </nav>
+
+            <!--  2.3 LOGOUT BUTTON -->
+            <a href="login.html"><button class="basics_logout_button"> LOG OUT</button></a>
+
+            <!--  2.4 PROFILEPHOTO -->
+            <img src="img/examplephotos/profilephoto.gif" class="basics_profile_photo" >
+
+    </header>
+        
+    <!-- 3 USER INFO -->
+    <aside class="info_usr_general"> 
+
+        <div  class="info_usr_basic">
+              <p>Name_profile</p>
+              <p>Birthday: 00/00/0000</p>
+              <p>SDDS DO QUE N VIVEMOS AINDA RSRSRS</p>
+        </div>
+            
+        <div class="info_usr_plus" >
+            <p>ESTUDANTE: Politreco </p>
+            <p>CELL: 98888888</p>
+            <P>EMAIL: 1234poli@usp.br</P>
+        </div>   
+
+    </aside>     
+        
+    <!-- 4 FEED -->
+    <section class="ownfeed"> 
+        <!-- 2  PIU'S FEED - Região principal onde serão publicados os Piu's -->
+                <form class="feedDiv" >
+                    <textarea for="piu_box" class="basics_piu_box"  name=piu cols=140 rows=3 placeholder="Thinking about something????"></textarea>
+                    <input type="submit" class="basics_submit_piu">
+                    <span class="basics_contador">0/140</span>
+    
+                    <div class="basics_divPius">
+    
+                        <article class="basics_Piu" id="firstPiu">
+                            <button class="basics_Piu_like_button" class="button"></button>
+                            <span class="basics_contadorLikes">0</span>
+                            <button class="basics_Piu_dislike_button" class="button"></button>
+                            <span class="basics_contadorDislikes">0</span>
+
+                            <p  class="basics_Piu_p" > allllouuuuuuuuu </p>
+
+                            <button class="basics_Piu_delete_button" class="button" ></button>
+                            <button class="basics_Piu_edit_button"></button>
+                            <button class="basics_Piu_highlight_button"></button>
+                        </article>
+                        
+                    </div>
+                </form>
+    </section>
+    
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/PiuMessages.js"></script>
+    <script src="js/Contadores.js"></script>
+
+        
+    </body>
+
+</html>
