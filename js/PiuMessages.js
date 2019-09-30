@@ -294,16 +294,17 @@ function editPiu(variable){
     var contentPiu= variable.parent().find("p").text();
     var piuBox= variable.parent();
 
-    var edit=$("<textarea>").addClass(".basics_piu_box").attr('for','piu_box');
-    var input=$("<input>").addClass("basics_submit_piu").attr('type', 'submit');
-    var newContent= edit.val(contentPiu);
-
+    var edit=$("<textarea>").addClass("basics_Piu_edit").attr('for','piu_box');
+    var input=$("<input>").addClass("basics_submit_piu_edit").attr('type', 'submit');
+    edit.text(contentPiu);
     piuBox.append(edit);
     piuBox.append(input);
 
+
     $("input").on('click', function(e){
         e.preventDefault();
-        contentPiu.text(newContent);
+       // var new = edit.val();
+              
     });
     
 };
