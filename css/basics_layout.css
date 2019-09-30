@@ -224,7 +224,7 @@ a:link,a:visited,a:hover {
 }
 
     /*CARACTERISTICAS DE CADA PIU */
-   /* #firstPiu{display: none;}*/
+   #firstPiu{display: none;}
 
     .basics_Piu{            /*ARTICLE(caixa) que guarda cada Piu*/
         
