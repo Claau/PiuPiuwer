@@ -10,9 +10,7 @@ $(function(){
     submitButtonPiu.on("click",function(e){
         e.preventDefault();
         inserirPiuPropio()});
-   loadSavedPius();
-
-
+        loadSavedPius();
 });
 
 function loadSavedPius(){
@@ -34,19 +32,28 @@ function testeValidPiu(){
     var conteudoPiu = $(".basics_piu_box").val();
     var qtdLetrasPiu = conteudoPiu.split("").length;
     
-
     //xcontador
     $(".basics_contador").text(qtdLetrasPiu + "/140");
 
-    if( qtdLetrasPiu > 140){
-        boxPiu.css( { 
-            "border": "2px solid red", "color": "red" })
-        submitButtonPiu.attr("disabled", true);}
+    if( qtdLetrasPiu > 140 ){
+        boxPiu.css( { "border": "2px solid red", "color": "red" })
+        submitButtonPiu.attr("disabled", true); 
+        if( qtdLetrasPiu == 150) alert("Max of caracters 140");
+    }
 
-    if (qtdLetrasPiu <= 140){
+    if( qtdLetrasPiu == 0 ){
+        
+        alert("Incorrect number of caracters!");  
+        boxPiu.css( { "border": "2px solid red", "color": "red" })
+        submitButtonPiu.attr("disabled", true); 
+        alert("Min of caracters 1");
+    }
+
+    if (qtdLetrasPiu <= 140 && qtdLetrasPiu!=0 ){
         boxPiu.css( { 
             "border": "1.5px solid rgb(21, 206, 98)",  "color": "black"})
-        submitButtonPiu.attr("disabled", false);}
+            submitButtonPiu.attr("disabled", false);
+    }
         
 };
 
@@ -54,7 +61,7 @@ function testeValidPiu(){
 function inserirPiuPropio(){
     var antigoPiu = $(".basics_divPius");
     var contentPiu = $(".basics_piu_box").val();
-    var username = "username";
+    var username = "@Name_profile";
 
   
     var novoPiu=NovoPiuPropio( contentPiu, username);
@@ -103,6 +110,7 @@ function inserirPiuPropio(){
 };
 
 function inserirPiuDoServidor(data){
+    console.log
     var antigoPiu = $(".basics_divPius");
     var contentPiu = data.mensagem;
     var usernamePiu= data.username;
@@ -110,7 +118,7 @@ function inserirPiuDoServidor(data){
   
     var novoPiu=NovoPiudoServidor(contentPiu, usernamePiu, profilePhoto);
     antigoPiu.prepend(novoPiu);
-
+    
     //FUNCAO REMOVER PIU
     novoPiu.find(".basics_Piu_delete_button").on("click",function(e){
         e.preventDefault();
@@ -200,6 +208,63 @@ function NovoPiudoServidor(contentPiu, input_username, input_profilePhoto, conta
     var textPiu= $("<p>").addClass("basics_Piu_p").text(contentPiu); 
     var username= $("<span>").addClass("basics_usernamePiu").text(input_username);
     var profilePhoto= $("<img>").addClass("basics_photoProfile_piu").attr('src',input_profilePhoto);
+
+    dislike_button.on("click",function(e){
+        e.preventDefault();
+
+    });    
+    like_button.on("click",function(e){
+        e.preventDefault();
+    });
+    highlight_button.on("click",function(e){
+        e.preventDefault();
+    });
+
+    if(input_profilePhoto == ""){ 
+       profilePhoto.attr("src", false); }//backgroun-image default
+
+    contador_likes.text("0");
+    contador_dislikes.text("0");
+
+    div.append(dislike_button);
+    div.append(like_button);
+    div.append(highlight_button);
+    div.append(contador_likes);
+    div.append(contador_dislikes);
+    div.append(textPiu);
+    div.append(username);
+    div.append(profilePhoto);
+
+
+
+    return div;
+}
+
+function NovoPiudoServidor2(contentPiu, input_username, input_profilePhoto, contador_likes,contador_dislikes){
+
+    var div=$("<article>").addClass("basics_Piu");
+    var dislike_button = $("<button>").addClass("basics_Piu_dislike_button");
+    var like_button = $("<button>").addClass("basics_Piu_like_button");
+    var highlight_button= $("<button>").addClass("basics_Piu_highlight_button");
+    var contador_likes= $("<span>").addClass("basics_contadorLikes");
+    var contador_dislikes= $("<span>").addClass("basics_contadorDislikes");
+    var textPiu= $("<p>").addClass("basics_Piu_p").text(contentPiu); 
+    var username= $("<span>").addClass("basics_usernamePiu").text(input_username);
+    var profilePhoto= $("<img>").addClass("basics_photoProfile_piu").attr('src',input_profilePhoto);
+
+    dislike_button.on("click",function(e){
+        e.preventDefault();
+        adiconarDislike($(this));
+    });    
+    like_button.on("click",function(e){
+        e.preventDefault();
+        adiconarLike($(this));
+    });
+
+    highlight_button.on("click",function(e){
+        e.preventDefault();
+        $(this).parent().remove();       
+    });
 
     if(input_profilePhoto == ""){ 
        profilePhoto.attr("src", false); }//backgroun-image default
@@ -291,11 +356,12 @@ function destacarPiu(variable){
     var contador_likes= piuASerPosicionado.find(".basics_contadorLikes").text();
     var contador_dislikes= piuASerPosicionado.find(".basics_contadorDislikes").text();
 
-
-    var piuReposicionado= NovoPiudoServidor( contentPiu, username, profilePhoto, contador_likes, contador_dislikes);
-    piuASerPosicionado.hide();
+    var piuReposicionado= NovoPiudoServidor2( contentPiu, username, profilePhoto, contador_likes, contador_dislikes);
+    piuASerPosicionado.toggle();
     piuReposicionado.toggleClass("highlightPiu");
     piuReposicionado.addClass("piu_destacado");
-    caixaDePublicacoes.prepend(piuReposicionado);       
-
+    caixaDePublicacoes.prepend(piuReposicionado);    
+    
+    return piuASerPosicionado;
 };
+
